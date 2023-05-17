@@ -1,0 +1,8 @@
+.openapi-generator
+.openapi-generator-ignore
+openapitools.json
+.DS_Store
+.terraform
+.terraform.lock.hcl
+.tfstate
+.tfstate.backup

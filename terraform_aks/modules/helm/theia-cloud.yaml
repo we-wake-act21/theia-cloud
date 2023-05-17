@@ -1,0 +1,49 @@
+imagePullPolicy: Always
+
+app:
+  id: asdfghjkl
+  name: Theia Cloud
+
+image:
+  name: kuldeepdocker/impaktapps:v13.12
+  pullSecret: ""
+  timeoutStrategy: "FIXEDTIME"
+  timeoutLimit: "30"
+  imagePullPolicy: IfNotPresent
+  appServerPort: 8081
+
+hosts:
+  usePaths: true
+  paths:
+    service: servicex
+    landing: trynow
+    instance: instances
+
+landingPage:
+  image: kuldeepdocker/landing-page:v4.0
+  appDefinition: "theia-cloud-demo"
+  ephemeralStorage: false
+
+keycloak:
+  enable: true
+  realm: "TheiaCloud"
+  clientId: "theia-cloud"
+  clientSecret: "publicbutoauth2proxywantsasecret"
+  cookieSecret: "OQINaROshtE9TcZkNAm5Zs2Pv3xaWytBmc5W7sPX7ws="
+
+operator:
+  image: kuldeepdocker/operator:v1.0
+  eagerStart: false
+  bandwidthLimiter: "WONDERSHAPER"
+  sessionsPerUser: "1"
+
+ingress:
+  instanceName: "theia-cloud-demo-ws-ingress"
+  clusterIssuer: letsencrypt-prod
+  theiaCloudCommonName: false
+
+monitor:
+  enable: false
+  activityTracker:
+    enable: true
+    interval: 1

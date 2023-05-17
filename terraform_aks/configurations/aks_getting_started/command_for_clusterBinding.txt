@@ -1,0 +1,1 @@
+kubectl create clusterrolebinding operator-api-access --clusterrole=cluster-admin --serviceaccount=theiacloud:operator-api-service-account -n theiacloud
