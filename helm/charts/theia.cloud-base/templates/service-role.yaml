@@ -1,0 +1,25 @@
+{{- if not (lookup "rbac.authorization.k8s.io/v1" "ClusterRole" "" .Values.servicerole.name) }}
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ .Values.servicerole.name }}
+rules:
+  -
+    apiGroups:
+      - ""
+      - theia.cloud
+    resources:
+      - appdefinitions
+      - sessions
+      - workspaces
+    verbs: ["list", "create", "watch", "get", "patch", "delete"]
+  -
+    apiGroups:
+      - ""
+      - metrics.k8s.io
+    resources:
+      - pods
+    verbs: ["list", "get", "watch"]
+
+{{- end }}

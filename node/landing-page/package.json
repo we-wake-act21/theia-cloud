@@ -1,0 +1,38 @@
+{
+  "name": "landing-page",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build:nolint": "vue-cli-service build --skip-plugins @vue/cli-plugin-eslint",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@eclipse-theiacloud/common": "0.8.0-alpha.23",
+    "@types/uuid": "^8.3.2",
+    "axios": "^0.25.0",
+    "core-js": "^3.6.5",
+    "keycloak-js": "^16.1.1",
+    "uuid": "^8.3.2",
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.6",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "@vue/cli-plugin-babel": "~5.0.8",
+    "@vue/cli-plugin-eslint": "~5.0.8",
+    "@vue/cli-plugin-typescript": "~5.0.8",
+    "@vue/cli-service": "~5.0.8",
+    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^9.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "prettier": "^2.4.1",
+    "typescript": "~4.5.5"
+  }
+}

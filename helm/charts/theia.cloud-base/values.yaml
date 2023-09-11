@@ -1,0 +1,14 @@
+issuerprod:
+  name: letsencrypt-prod
+
+issuerstaging:
+  name: theia-cloud-selfsigned-issuer
+
+issuer:
+  email: mmorlock@example.com
+
+operatorrole:
+  name: operator-api-access
+
+servicerole:
+  name: service-api-access

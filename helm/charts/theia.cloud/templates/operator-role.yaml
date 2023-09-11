@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ .Values.operatorrole.name }}-{{ .Release.Namespace }}
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: {{ .Values.operatorrole.name }}
+subjects:
+- kind: ServiceAccount
+  name: operator-api-service-account
+  namespace: {{ .Release.Namespace }}
